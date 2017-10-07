@@ -63,6 +63,21 @@ imshow(EI);
 % -----Start Solving Problem 2.1-----
 R = imread('Rice.jpg');
 
+S = [[-1 -2 -1]; [0 0 0]; [1 2 1];];
+S2 = [[-1 0 1]; [-2 0 2]; [-1 0 1];];
+
+RS = imfilter(R,S);
+RS2 = imfilter(R,S2);
+figure;
+subplot(2,2,1);
+imshow(R);
+subplot(2,2,2);
+imshow(RS);
+subplot(2,2,3);
+imshow(R);
+subplot(2,2,4);
+imshow(RS2);
+
 % -----Finish Solving Problem 2.1-----
 % -----Start Solving Problem 2.2-----
 

@@ -1,3 +1,7 @@
+% Skyler Cowley
+% CS 6680
+% Assignment 3
+
 function [ filteredIm ] = AverageFiltering( im, mask )
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here

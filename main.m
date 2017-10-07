@@ -3,6 +3,8 @@
 % Assignment 3
 
 close all;
+% -----Start Solving Problem 1-----
+% -----Start Solving Problem 1.1-----
 
 A = imread('Circuit.jpg');
 
@@ -20,6 +22,9 @@ imshow(AA3);
 subplot(1,3,3);
 imshow(AA5);
 
+% -----Finish Solving Problem 1.1-----
+% pause()
+% -----Start Solving Problem 1.2-----
 
 AM3 = MedianFiltering(A, w3x3);
 AM5 = MedianFiltering(A, s5x5);
@@ -32,4 +37,54 @@ imshow(AM3);
 subplot(1,3,3);
 imshow(AM5);
 
+% -----Finish Solving Problem 1.2-----
+% pause()
+% -----Start Solving Problem 1.3-----
 
+M = imread('Moon.jpg');
+L = [[1 1 1]; [1 -8 1]; [1 1 1];];
+L = L .* -1;
+FI = imfilter(M,L);
+
+EI = M + FI;
+
+figure(3);
+subplot(1,3,1);
+imshow(M);
+subplot(1,3,2);
+imshow(FI);
+subplot(1,3,3);
+imshow(EI);
+
+% -----Finish Solving Problem 1.3-----
+% -----Finish Solving Problem 1-----
+% pause()
+% -----Start Solving Problem 2-----
+% -----Start Solving Problem 2.1-----
+R = imread('Rice.jpg');
+
+S = [[-1 -2 -1]; [0 0 0]; [1 2 1];];
+S2 = [[-1 0 1]; [-2 0 2]; [-1 0 1];];
+
+RS = imfilter(R,S);
+RS2 = imfilter(R,S2);
+figure;
+subplot(2,2,1);
+imshow(R);
+subplot(2,2,2);
+imshow(RS);
+subplot(2,2,3);
+imshow(R);
+subplot(2,2,4);
+imshow(RS2);
+
+% -----Finish Solving Problem 2.1-----
+% -----Start Solving Problem 2.2-----
+
+% -----Finish Solving Problem 2.2-----
+% -----Finish Solving Problem 2-----
+% pause()
+% -----Start Solving Problem 3-----
+
+% -----Finish Solving Problem 3-----
+% pause()

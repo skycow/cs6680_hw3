@@ -1,4 +1,8 @@
-function [ filteredIm ] = AverageFiltering( im, mask )
+% Skyler Cowley
+% CS 6680
+% Assignment 3
+
+function [ filteredIm ] = MedianFiltering( im, mask )
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
 

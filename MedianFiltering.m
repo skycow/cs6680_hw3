@@ -22,20 +22,12 @@ result = im;
 for c = 1:imcols
 for r = 1:imrows
 
-section = padded(r:r+maskrows-1, c:c+maskrows-1);
-%innersum = 0;
-%for cc = 1:maskcols
-%for rr = 1:maskrows
+section = padded(r:r+maskrows-1, c:c+maskcols-1);
 
-%innersum = innersum + section(rr,cc) * mask(rr,cc);
+%temp = sort(section(:));
+%result(r,c) = uint8((temp(floor(maskrows*maskcols/2+1))+temp(ceil(maskrows*maskcols/2)))/2);
 
-%end
-%end
-
-
-temp = sort(section(:));
-result(r,c) = uint8((temp(floor(maskrows*maskcols/2+1))+temp(ceil(maskrows*maskcols/2)))/2);
-
+result(r,c) = median(section(:));
 end
 end
 
